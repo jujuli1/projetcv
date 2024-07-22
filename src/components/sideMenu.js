@@ -59,14 +59,10 @@ const SideMenu = () => {
                 <Coordonnees />
             </Modal>
 
-            {sidePanelIsOpen && (
-                <div className='sidePanel'>
-                    <button onClick={closeSidePanel} className='sidePanelClose'>✖</button>
-                    
-                    <Presentation/>
-                    {/* Contenu du panneau latéral */}
-                </div>
-            )}
+            <div className={`sidePanel ${sidePanelIsOpen ? 'sidePanelOpen' : ''}`}>
+                <button onClick={closeSidePanel} className='sidePanelClose'>✖</button>
+                <Presentation />
+            </div>
         </div>
     );
 };

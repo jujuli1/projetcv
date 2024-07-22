@@ -5,12 +5,13 @@
   left: 0;
   width: 50%;
   height: 100%;
-  background: white;
+  
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
-  transform: translateX(0);
+  transform: translateX(-100%);
   z-index: 1000;
   background-color: black;
+  border-right-style: groove;
 }
 
 .sidePanelClose {
@@ -31,6 +32,10 @@
 
 .sidePanelHidden {
   transform: translateX(-100%);
+}
+
+.sidePanelOpen {
+  transform: translateX(0);
 }
 
 
