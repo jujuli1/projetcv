@@ -7,7 +7,7 @@
   height: 100%;
   
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease;
   transform: translateX(-100%);
   z-index: 1000;
   background-color: black;
@@ -161,7 +161,12 @@ font-weight: bold;
 #sign {
   stroke-dasharray: 2350;
   stroke-dashoffset: 2350;
-  animation: animate 3s ease-in forwards;
+  animation: animate 4s ease-in forwards;
+}
+
+.jl{
+  width: 74%;
+  height: 165px;
 }
 
 @keyframes animate {
