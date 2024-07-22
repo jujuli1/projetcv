@@ -1,0 +1,168 @@
+/* Style du menu latéral */
+.sidePanel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+  z-index: 1000;
+  background-color: black;
+}
+
+.sidePanelClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sidePanelHidden {
+  transform: translateX(-100%);
+}
+
+
+.App{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.presentation{
+  background-color: black;
+  height: 100%;
+}
+
+
+.hidden {
+  opacity: 0;
+}
+
+/* rendu fondant*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 2;
+  }
+}
+
+.fade-in-qui {
+  animation: fadeIn 1s ease-in-out;
+  animation-duration: 3s;
+  font-size: 40px;
+  color: aliceblue;
+}
+
+.fade-in-qui2 {
+  animation: fadeIn 1s ease-in-out;
+  animation-duration: 6s;
+  width: 50%;
+}
+
+.fade-in-qui3 {
+  animation: fadeIn 1s ease-in-out;
+  animation-duration: 7s;
+  width: 50%;
+}
+
+.qui-container p {
+  margin-bottom: 3em; 
+  line-height: 2.5; 
+}
+
+@media (max-width: 768px) {
+.fade-in-qui {
+  animation: fadeIn 1s ease-in-out;
+  animation-duration: 3s;
+  font-size: 27px;
+}
+
+}
+
+.paragraphequi {
+  position: absolute;
+  color: aliceblue;
+font-weight: bold;
+}
+
+.qui-container p {
+  margin-bottom: 1em;
+  line-height: 2.5;
+}
+
+/* animation petit point */
+
+.dots-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -45px;
+  margin-left: -14%;
+  margin-bottom: 90px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: aliceblue;
+  border-radius: 50%;
+  opacity: 0;
+  animation: blink 1.4s infinite both;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 80%, 100% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+/*Signature */
+
+.signature {
+  padding-left: 45%;
+  height: 10px;
+  width: 39%;
+}
+
+#sign {
+  stroke-dasharray: 2350;
+  stroke-dashoffset: 2350;
+  animation: animate 3s ease-in forwards;
+}
+
+@keyframes animate {
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+
+
