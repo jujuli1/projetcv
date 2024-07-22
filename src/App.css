@@ -177,3 +177,50 @@ width: 89%;
 }
 
 
+/*Responsive */
+
+@media (max-width: 768px) {
+  .sidePanel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.6s ease;
+    transform: translateX(-100%);
+    z-index: 1000;
+    background-color: black;
+    border-right-style: groove;
+  }
+
+}
+
+
+
+@media (max-width: 768px) {
+  .sidePanelOpen {
+    transform: translateX(0);
+  }
+
+}
+
+@media (max-width: 768px) {
+  .qui-container p {
+    margin-bottom: 1em;
+  line-height: 116%;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .dots-container {
+    display: block;
+  }
+
+}
+
+
+
