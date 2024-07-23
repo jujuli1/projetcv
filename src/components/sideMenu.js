@@ -2,19 +2,28 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Presentation from '../pages/Presentation';
 import Coordonnees from '../pages/Coordonnees';
+import Competences from '../pages/Competences';
 import Modal from 'react-modal';
 
 const SideMenu = () => {
-
-    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [coordonneesModalIsOpen, setCoordonneesModalIsOpen] = useState(false);
+    const [competencesModalIsOpen, setCompetencesModalIsOpen] = useState(false);
     const [sidePanelIsOpen, setSidePanelIsOpen] = useState(false);
 
-    const openModal = () => {
-        setModalIsOpen(true);
+    const openCoordonneesModal = () => {
+        setCoordonneesModalIsOpen(true);
     };
 
-    const closeModal = () => {
-        setModalIsOpen(false);
+    const closeCoordonneesModal = () => {
+        setCoordonneesModalIsOpen(false);
+    };
+
+    const openCompetencesModal = () => {
+        setCompetencesModalIsOpen(true);
+    };
+
+    const closeCompetencesModal = () => {
+        setCompetencesModalIsOpen(false);
     };
 
     const openSidePanel = () => {
@@ -24,39 +33,38 @@ const SideMenu = () => {
     const closeSidePanel = () => {
         setSidePanelIsOpen(false);
     };
+
     return (
         <div className='sidemenu'>
-            
-            
-
-                
-                
-                   
-                    <ul>
-                        <div  className='Link'>
-                        <li><Link to='/admin/user/presentation' onClick={openSidePanel}>Présentation</Link></li>
-                    <li><Link to='/admin/user/parcour'>Mon parcour</Link></li>
-                    <li><Link to='/admin/user/add'>Compétences</Link></li>
-                    <li ><button onClick={openModal} className='modalButton' >
-                                    Mes Coordonnées
-                                </button></li>
-                        </div>
-                    
-                    </ul>
-                
-                
-            
+            <ul>
+                <div className='Link'>
+                    <li><Link to='/admin/user/presentation' onClick={openSidePanel}>Présentation</Link></li>
+                    <li><Link to='/admin/user/parcour'>Mon parcours</Link></li>
+                    <li><Link to='/admin/user/add' onClick={openCompetencesModal}>Compétences</Link></li>
+                    <li><button onClick={openCoordonneesModal} className='modalButton'>Mes Coordonnées</button></li>
+                </div>
+            </ul>
 
             <Modal
-                isOpen={modalIsOpen}
-                onRequestClose={closeModal}
+                isOpen={coordonneesModalIsOpen}
+                onRequestClose={closeCoordonneesModal}
                 ariaHideApp={false}
                 className={'modalOpen'}
                 overlayClassName="modalOverlay"
-                
             >
-                <button onClick={closeModal} className='modalClose'>✖</button>
+                <button onClick={closeCoordonneesModal} className='modalClose'>✖</button>
                 <Coordonnees />
+            </Modal>
+
+            <Modal
+                isOpen={competencesModalIsOpen}
+                onRequestClose={closeCompetencesModal}
+                ariaHideApp={false}
+                className={'modalOpen'}
+                overlayClassName="modalOverlay"
+            >
+                <button onClick={closeCompetencesModal} className='modalClose'>✖</button>
+                <Competences />
             </Modal>
 
             <div className={`sidePanel ${sidePanelIsOpen ? 'sidePanelOpen' : ''}`}>
