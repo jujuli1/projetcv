@@ -27,10 +27,10 @@ const SideMenu = () => {
     return (
         <div className='sidemenu'>
             
-            <ul>
+            
 
                 
-                <li>
+                
                    
                     <ul>
                         <div  className='Link'>
@@ -43,9 +43,9 @@ const SideMenu = () => {
                         </div>
                     
                     </ul>
-                </li>
                 
-            </ul>
+                
+            
 
             <Modal
                 isOpen={modalIsOpen}
