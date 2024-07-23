@@ -34,7 +34,7 @@ const SideMenu = () => {
                    
                     <ul>
                         <div  className='Link'>
-                        <li><Link to='/admin/user/presentation' onClick={openSidePanel}>Présentation</Link></li>
+                        <li><Link to='/admin/user/presentation' onClick={openSidePanel}>Présentationdemoi</Link></li>
                     <li><Link to='/admin/user/parcour'>Mon parcour</Link></li>
                     <li><Link to='/admin/user/add'>Compétences</Link></li>
                     <li ><button onClick={openModal} className='modalButton' >
