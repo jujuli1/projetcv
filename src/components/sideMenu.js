@@ -41,7 +41,7 @@ const SideMenu = () => {
                     <li><Link to='/admin/user/presentation' onClick={openSidePanel}>Présentation</Link></li>
                     <li><Link to='/admin/user/parcour'>Mon parcours</Link></li>
                     <li><Link to='/admin/user/add' onClick={openCompetencesModal}>Compétences</Link></li>
-                    <li><button onClick={openCoordonneesModal} className='modalButton'>Mes Coordonnées</button></li>
+                    <li><Link onClick={openCoordonneesModal} className='modalButton'>Mes Coordonnées</Link></li>
                 </div>
             </ul>
 
