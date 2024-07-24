@@ -323,6 +323,15 @@ width: 89%;
   margin-right: 15px;
 }
 
+
+  
+  
+.imgResponsive {
+  display: none;
+}
+
+
+
 /*Responsive */
 
 @media (max-width: 500px) {
@@ -342,7 +351,7 @@ width: 89%;
   
   li{
     
-    margin-right: 5px;
+    margin-right: 10px;
   
 }
 
@@ -416,3 +425,12 @@ width: 89%;
 }
 
 
+@media (max-width: 768px) {
+  .imgResponsive {
+    display: flex;
+    width: 5%;
+    height: auto;
+    margin-left: 94%;
+    margin-bottom: 13px;
+  }
+}

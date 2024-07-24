@@ -63,7 +63,12 @@ const Competences = () => {
         <div>
             <div className='modalComp'>
 
-            
+            <img className='imgResponsive' src={TP}/>
+            <img className='imgResponsive' src='https://clarity-prod-s3.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/05/12164244/React.png'/>
+            <img className='imgResponsive' src='https://venpep.com/themes/images/technology/img23.png'/>
+            <img className='imgResponsive' src='https://thesafety.us/images/articles/javascript-logo.png'/>
+            <img className='imgResponsive' src='https://www.i-pulse.nl/Content/images/logos/html5css3.png'/>
+            <img className='imgResponsive' src='https://www.foodpal-app.com/uploads/images/food/31769/espresso-6053151e35820-400.webp'/>
 
                 <div id='carousel'>
                     <div id='container' ref={containerRef}>
