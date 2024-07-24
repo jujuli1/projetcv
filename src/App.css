@@ -276,7 +276,9 @@ width: 89%;
   transition: all 0.3s ease;
 }
 
-#carousel {
+@media (min-width: 501px) {
+
+ #carousel {
   width: 800px;
   height: 400px;
   border: solid 4px #FFF;
@@ -304,6 +306,8 @@ width: 89%;
   margin: 0;
   display: inline-block;
   background-size: cover;
+}
+ 
 }
 
 
