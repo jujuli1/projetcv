@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import TP from '../images/tp.jpg'
-import { SiReact } from 'react-icons/si'; 
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'; 
+
 
 
 const Competences = () => {
@@ -63,6 +64,7 @@ const Competences = () => {
         <div>
             <div className='modalComp'>
 
+             {/**Images partie responsive */}
             <img className='imgResponsive' src={TP}/>
             <img className='imgResponsive' src='https://clarity-prod-s3.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/05/12164244/React.png'/>
             <img className='imgResponsive' src='https://venpep.com/themes/images/technology/img23.png'/>
@@ -74,9 +76,8 @@ const Competences = () => {
                     <div id='container' ref={containerRef}>
 
                     </div>
-                    <img src='https://t4.ftcdn.net/jpg/07/11/37/69/360_F_711376939_orcZfQJbdroADKf2swzUyokKWc0vBsKP.jpg' className='bouton' id='d' onClick={handleRightClick}/>
-                    <img src='https://t4.ftcdn.net/jpg/07/11/37/69/360_F_711376939_orcZfQJbdroADKf2swzUyokKWc0vBsKP.jpg' className='bouton' id='g' onClick={handleLeftClick}/>
-
+                    <FaArrowLeft className='bouton' id='g' onClick={handleLeftClick} />
+                    <FaArrowRight className='bouton' id='d' onClick={handleRightClick} />
                 </div>
 
 
