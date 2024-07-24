@@ -307,6 +307,12 @@ width: 89%;
   display: inline-block;
   background-size: cover;
 }
+
+.modalClose{
+  background-color: red;
+  border-radius: 10px;
+  color: antiquewhite;
+}
  
 }
 

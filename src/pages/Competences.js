@@ -1,28 +1,44 @@
 import React, { useEffect, useRef, useState } from 'react';
 import TP from '../images/tp.jpg'
+import { SiReact } from 'react-icons/si'; 
+
 
 const Competences = () => {
 
     const containerRef = useRef(null);
     const [position, setPosition] = useState(0);
 
-    // tableau de photo carousel
+    //photo carousel
     const images = [
         TP,
-        'https://t4.ftcdn.net/jpg/07/11/37/69/360_F_711376939_orcZfQJbdroADKf2swzUyokKWc0vBsKP.jpg',
+        'https://clarity-prod-s3.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/05/12164244/React.png',
+        'https://venpep.com/themes/images/technology/img23.png',
+        'https://thesafety.us/images/articles/javascript-logo.png',
+        'https://www.foodpal-app.com/uploads/images/food/31769/espresso-6053151e35820-400.webp',
+        'https://www.i-pulse.nl/Content/images/logos/html5css3.png',
+        
+
+        
+
     ];
     useEffect(() => {
         if (containerRef.current) {
-            // Définir la largeur du conteneur
+            // margeur carousel
             containerRef.current.style.width = `${800 * images.length}px`;
 
-            // Ajouter les photos au conteneur
+            // Ajout photo
             images.forEach((url, index) => {
                 const div = document.createElement('div');
                 div.className = 'photo';
                 div.style.backgroundImage = `url('${url}')`;
+                div.style.width = '800px'; 
+                div.style.height = '400px'; 
+                div.style.backgroundSize = 'cover'; 
+                div.style.backgroundPosition = 'center'; 
                 containerRef.current.appendChild(div);
             });
+
+            
         }
     }, [images]);
 
@@ -46,6 +62,8 @@ const Competences = () => {
     return (
         <div>
             <div className='modalComp'>
+
+            
 
                 <div id='carousel'>
                     <div id='container' ref={containerRef}>
