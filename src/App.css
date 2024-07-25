@@ -340,20 +340,28 @@ width: 89%;
 
 /*Responsive */
 
-max-height: 100vh; /* scroll*/
-  overflow-y: auto; /*scroll*/
 
-  @media (max-width: 500px) {
+
+@media (max-width: 768px) {
+  .modalComp {
+      max-height: 100vh; /* scroll */
+      overflow-y: auto; /* scroll */
+  }
   
-    .modalComp{
-      
-      max-height: 100vh; /* scroll*/
-      overflow-y: auto; /*scroll*/
-    
+  .imgResponsive {
+      display: block;
+      width: 100%; /* Ajuster la largeur à 100% pour être responsive */
+      height: auto;
+      margin: 10px 0; /* Espacement entre les images */
   }
 
+  .responsive-images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
 }
-
 @media (max-width: 500px) {
   
     .Link{
