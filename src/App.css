@@ -54,7 +54,7 @@ body::before {
 }
 
 .sidePanelClose {
-  position: absolute;
+  position: sticky;
   top: 10px;
   right: 10px;
   background: red;
@@ -67,6 +67,7 @@ body::before {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  margin-left: 92%;
 }
 
 .sidePanelHidden {
