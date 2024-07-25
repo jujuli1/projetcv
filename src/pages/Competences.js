@@ -25,7 +25,7 @@ const Competences = () => {
     ];
     useEffect(() => {
         if (containerRef.current) {
-            // margeur carousel
+            // largeur carousel
             containerRef.current.style.width = `${800 * images.length}px`;
 
             // Ajout photo
@@ -44,6 +44,7 @@ const Competences = () => {
         }
     }, [images]);
 
+    {/** fleche directionel carousel */}
     const handleLeftClick = () => {
         setPosition((prev) => Math.max(prev - 1, 0));
     };
@@ -59,6 +60,8 @@ const Competences = () => {
         }
     }, [position]);
 
+
+    {/** zoom/close image carouselle en responsive */}
     const handleImageClick = (image) => {
         setExpandedImage(image);
     };
@@ -81,7 +84,7 @@ const Competences = () => {
                 </div>
 
 
-
+                {/** carousel */}
                 <div id='carousel'>
                     <div id='container' ref={containerRef}>
 

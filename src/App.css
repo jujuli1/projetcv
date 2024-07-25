@@ -46,10 +46,10 @@ body::before {
   height: 100%;
   
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.6s ease;
+  transition: transform 1s ease;
   transform: translateX(-100%);
   z-index: 1000;
-  background-color: black;
+  background-color: white;
   border-right-style: groove;
 }
 
@@ -72,11 +72,13 @@ body::before {
 .sidePanelHidden {
   transform: translateX(-100%);
 }
-
 .sidePanelOpen {
   transform: translateX(0);
   overflow: auto;
 }
+
+
+
 
 
 .App{
@@ -84,12 +86,12 @@ body::before {
   flex-direction: row-reverse;
 }
 
-.presentation{
-  background-color: black;
-  height: 100vh;
-  
-  
-}
+
+
+
+
+
+
 
 
 .hidden {
@@ -110,7 +112,7 @@ body::before {
   animation: fadeIn 1s ease-in-out;
   animation-duration: 3s;
   font-size: 40px;
-  color: aliceblue;
+  color: black;
 }
 
 .fade-in-qui2 {
@@ -140,14 +142,26 @@ body::before {
 
 }
 
+
+/* page presentation*/
+
+.presentation{
+  background-color: #FFFBFB;
+  height: 100vh;
+}
+
 .paragraphequi {
   position: absolute;
-  color: aliceblue;
+  color: black;
 font-weight: bold;
 width: 89%;
 font-family: Marker;
   font-size: 24px;
 
+}
+
+.qui-container{
+  height: 50px;
 }
 
 .qui-container p {
@@ -171,7 +185,7 @@ font-family: Marker;
   width: 10px;
   height: 10px;
   margin: 0 5px;
-  background-color: aliceblue;
+  background-color: black;
   border-radius: 50%;
   opacity: 0;
   animation: blink 1.4s infinite both;
@@ -201,15 +215,16 @@ font-family: Marker;
 /*Signature */
 
 .signature {
-  padding-left: 45%;
-  height: 10px;
+  padding-left: 60%;
+  height: 131px;
   width: 39%;
+  margin-top: -122px;
 }
 
 #sign {
   stroke-dasharray: 2350;
   stroke-dashoffset: 2350;
-  animation: animate 4s ease-in forwards;
+  animation: animate 2s ease-in forwards;
 }
 
 .jl{
@@ -222,6 +237,10 @@ font-family: Marker;
     stroke-dashoffset: 0;
   }
 }
+
+
+
+
 
 
 /*  Side menu*/
@@ -253,12 +272,15 @@ font-family: Marker;
 }
 }
 
+
+
+
 /* Dans le composant Competences / Slider */
 
 .tp{
   width: 50%;
 }
-
+/* bouton carousel droit et gauche*/
 #d{
   left:0;
   opacity: 0.4;
@@ -330,7 +352,7 @@ font-family: Marker;
  
 }
 
-
+/* modale coordonées*/
 .ReactModalPortal{
   display: flex;
   flex-direction: row-reverse;
@@ -377,7 +399,7 @@ font-family: Marker;
 }
 
 .expanded-image {
-  max-width: 90%;
+  max-width: 100%;
   max-height: 90%;
 }
 
@@ -415,15 +437,15 @@ font-family: Marker;
 
 @media (max-width: 768px) {
   .modalComp {
-      max-height: 100vh; /* scroll */
-      overflow-y: auto; /* scroll */
+      max-height: 100vh; 
+      overflow-y: auto; 
   }
   
   .imgResponsive {
       display: block;
-      width: 100%; /* Ajuster la largeur à 100% pour être responsive */
+      width: 100%; 
       height: auto;
-      margin: 10px 0; /* Espacement entre les images */
+      margin: 10px 0; 
   }
 
   .responsive-images {
@@ -470,7 +492,7 @@ font-family: Marker;
     transition: transform 0.6s ease;
     transform: translateX(-100%);
     z-index: 1000;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     border-right-style: groove;
   }
 
@@ -481,6 +503,7 @@ font-family: Marker;
 @media (max-width: 768px) {
   .sidePanelOpen {
     transform: translateX(0);
+    background-color: #FFFBFB;
   }
 
 }
@@ -515,7 +538,7 @@ font-family: Marker;
 @media (max-width: 768px) {
   .paragraphequi {
     position: absolute;
-  color: aliceblue;
+  color: black;
   font-weight: bold;
   width: 89%;
   margin-left: 15px;

@@ -10,12 +10,11 @@ function App() {
     <div className="App">
 
 <BrowserRouter>
+
 <SideMenu/>
       
 </BrowserRouter>
-      
-      
-    </div>
+      </div>
   );
 }
 

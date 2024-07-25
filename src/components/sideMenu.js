@@ -10,6 +10,8 @@ const SideMenu = () => {
     const [competencesModalIsOpen, setCompetencesModalIsOpen] = useState(false);
     const [sidePanelIsOpen, setSidePanelIsOpen] = useState(false);
 
+
+    {/** gestion modales coordonnées/ copétences/ presentation */}
     const openCoordonneesModal = () => {
         setCoordonneesModalIsOpen(true);
     };
@@ -39,12 +41,17 @@ const SideMenu = () => {
             <ul>
                 <div className='Link'>
                     <li><Link to='/admin/user/presentation' onClick={openSidePanel}>Présentation</Link></li>
-                    <li><Link to='/admin/user/parcour'>Mon parcours</Link></li>
+                    <li>
+                        <a className='link' href='https://github.com/jujuli1/projetcv' target='_blank' rel='noopener noreferrer'>
+                        Github
+                        </a>
+                    </li>
                     <li><Link to='/admin/user/add' onClick={openCompetencesModal}>Compétences</Link></li>
                     <li><Link onClick={openCoordonneesModal} className='modalButton'>Mes Coordonnées</Link></li>
                 </div>
             </ul>
 
+            {/*modale coordonées */}
             <Modal
                 isOpen={coordonneesModalIsOpen}
                 onRequestClose={closeCoordonneesModal}
@@ -56,6 +63,8 @@ const SideMenu = () => {
                 <Coordonnees />
             </Modal>
 
+
+            {/**modale competence */}
             <Modal
                 isOpen={competencesModalIsOpen}
                 onRequestClose={closeCompetencesModal}
@@ -67,6 +76,8 @@ const SideMenu = () => {
                 <Competences />
             </Modal>
 
+
+            {/**bouton de fermeture page presentation */}
             <div className={`sidePanel ${sidePanelIsOpen ? 'sidePanelOpen' : ''}`}>
                 <button onClick={closeSidePanel} className='sidePanelClose'>✖</button>
                 <Presentation />
