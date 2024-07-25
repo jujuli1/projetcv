@@ -86,6 +86,8 @@ body::before {
 .presentation{
   background-color: black;
   height: 100%;
+  max-height: 100vh; /* scroll*/
+  overflow-y: auto; /*scroll*/
 }
 
 
@@ -281,6 +283,8 @@ width: 89%;
 @media (min-width: 501px) {
 
  #carousel {
+  animation: fadeIn 1s ease-in-out;
+  animation-duration: 3s;
   width: 800px;
   height: 400px;
   border: solid 4px #FFF;
@@ -335,6 +339,20 @@ width: 89%;
 
 
 /*Responsive */
+
+max-height: 100vh; /* scroll*/
+  overflow-y: auto; /*scroll*/
+
+  @media (max-width: 500px) {
+  
+    .modalComp{
+      
+      max-height: 100vh; /* scroll*/
+      overflow-y: auto; /*scroll*/
+    
+  }
+
+}
 
 @media (max-width: 500px) {
   
