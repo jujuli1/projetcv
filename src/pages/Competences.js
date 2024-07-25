@@ -8,6 +8,7 @@ const Competences = () => {
 
     const containerRef = useRef(null);
     const [position, setPosition] = useState(0);
+    const [expandedImage, setExpandedImage] = useState(null);
 
     //photo carousel
     const images = [
@@ -58,6 +59,14 @@ const Competences = () => {
         }
     }, [position]);
 
+    const handleImageClick = (image) => {
+        setExpandedImage(image);
+    };
+
+    const handleCloseImage = () => {
+        setExpandedImage(null);
+    };
+
     
 
     return (
@@ -67,9 +76,11 @@ const Competences = () => {
              {/** Images partie responsive */}
              <div className="responsive-images">
                     {images.map((image, index) => (
-                        <img key={index} className='imgResponsive' src={image} alt={`competence ${index}`} />
+                        <img key={index} className='imgResponsive' src={image} alt={`competence ${index}`} onClick={() => handleImageClick(image)} />
                     ))}
                 </div>
+
+
 
                 <div id='carousel'>
                     <div id='container' ref={containerRef}>
@@ -79,6 +90,15 @@ const Competences = () => {
                     <FaArrowRight className='bouton' id='d' onClick={handleRightClick} />
                 </div>
 
+                {/** zoom image responsive */}
+                {expandedImage && (
+                <div className="overlay">
+                    <div className="expanded-image-container">
+                        <img src={expandedImage} alt="Expanded" className="expanded-image" />
+                        <button className="close-button" onClick={handleCloseImage}>X</button>
+                    </div>
+                </div>
+            )}
 
             </div>
         </div>
