@@ -1,17 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect,  useState } from 'react';
 
 
 const Presentation = () => {
 
 
     const [isVisible, setIsVisible] = useState(false);
+   
+
+    
+    
   
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             setIsVisible(true);
-        }, 0); // Permet de forcer le re-rendu avant d'ajouter la classe
+            
+        }, 0); 
 
-        return () => clearTimeout(timeoutId); // Nettoyage si le composant se démonte
+        return () => clearTimeout(timeoutId); // nettoyage si le composant se démonte
     }, []);
     return (
         <div className='presentation'>
@@ -56,6 +61,7 @@ const Presentation = () => {
 </svg>
 
        </div>
+      
             
 
             </div>
@@ -71,6 +77,9 @@ const Presentation = () => {
         </div>
             
         </div>
+
+        
+        
         </div>
     );
 };

@@ -75,6 +75,7 @@ body::before {
 
 .sidePanelOpen {
   transform: translateX(0);
+  overflow: auto;
 }
 
 
@@ -85,9 +86,9 @@ body::before {
 
 .presentation{
   background-color: black;
-  height: 100%;
-  max-height: 100vh; /* scroll*/
-  overflow-y: auto; /*scroll*/
+  height: 100vh;
+  
+  
 }
 
 
@@ -101,7 +102,7 @@ body::before {
     opacity: 0;
   }
   to {
-    opacity: 2;
+    opacity: 1;
   }
 }
 
@@ -127,6 +128,7 @@ body::before {
 .qui-container p {
   margin-bottom: 3em; 
   line-height: 2.5; 
+  
 }
 
 @media (max-width: 768px) {
@@ -143,11 +145,15 @@ body::before {
   color: aliceblue;
 font-weight: bold;
 width: 89%;
+font-family: Marker;
+  font-size: 24px;
+
 }
 
 .qui-container p {
   margin-bottom: 1em;
   line-height: 2.5;
+  margin-left: 30px;
 }
 
 /* animation petit point */
@@ -237,6 +243,8 @@ width: 89%;
 
   li {
       margin-right: 85px;
+      list-style-type: none;
+      margin-bottom: 20px;
   }
 
   .Link li:hover {
@@ -330,6 +338,19 @@ width: 89%;
 }
 
 
+.ReactModal__Content {
+
+  animation: fadeIn 1s ease-in-out;
+  animation-duration: 3s;
+  border-bottom: solid 1px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 25px;
+  font-family: cursive;
+
+}
+
+
   
   
 .imgResponsive {
@@ -337,7 +358,7 @@ width: 89%;
 }
 
 
-/* styles pour image agrandie */
+/*  pour image agrandie en responsive */
 .overlay {
   position: fixed;
   top: 0;
@@ -378,6 +399,17 @@ width: 89%;
 
 
 /*Responsive */
+
+@media (max-width: 768px) {
+
+  li {
+    margin-right: 85px;
+    list-style-type: none;
+  }
+
+}
+
+
 
 
 
