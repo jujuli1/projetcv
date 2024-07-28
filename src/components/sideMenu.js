@@ -42,7 +42,7 @@ const SideMenu = () => {
         <div className='sidemenu'>
             <ul>
                 <div className='Link'>
-                    <li><Link to='/admin/user/presentation' onClick={openSidePanel}>Présentation</Link></li>
+                    <li><Link to='/admin/user/presentation' onClick={openSidePanel}  className='presentation'>Présentation</Link></li>
                     <li>
                         <a className='link' href='https://github.com/jujuli1/projetcv' target='_blank' rel='noopener noreferrer'>
                         <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" className='logogit' alt="GitHub"  />
