@@ -89,8 +89,24 @@ body::before {
 
 
 
+@keyframes zoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
 
 
+@keyframes hoverZoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
 
 
 
@@ -250,6 +266,8 @@ font-family: Marker;
   border-bottom-style: groove;
   border-bottom-left-radius: 40px;
   box-shadow: 0 14px 25px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+    z-index: 1;
 }
 
 @media (min-width: 501px) {
@@ -287,7 +305,9 @@ font-family: Marker;
   opacity: 0.4;
   transform: rotate(180deg);
   transition: all 0.3s ease;
-  width: 20px;
+  width: 103px;
+  font-size: 112px;
+  padding-bottom: 100px;
   
 }
 #g{
@@ -295,33 +315,27 @@ font-family: Marker;
   opacity: 0.4;
   transform: rotate(180deg);
   transition: all 0.3s ease;
-  width: 20px;
+  width: 103px;
+  font-size: 112px;
+  padding-bottom: 100px;
 }
 
-#g:hover{
 
-  transform:rotate(0deg) scale(1.1);
-  opacity:1;
-  transition: all 0.3s ease;
-}
-#d:hover{
-
-  transform:rotate(180deg) scale(1.1);
-  opacity:1;
-  transition: all 0.3s ease;
-}
 
 @media (min-width: 501px) {
 
  #carousel {
   animation: fadeIn 1s ease-in-out;
-  animation-duration: 3s;
-  width: 800px;
-  height: 400px;
+  animation-duration: 1s;
+  width: 1600px;
+  height: 800px;
   border: solid 4px #FFF;
   box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
+  margin-top: -22%;
+  margin-left: -83%;
+  border-radius: 10px;
 }
 
 #container{
@@ -338,11 +352,12 @@ font-family: Marker;
 }
 
 .photo{
-  width: 800px;
-  height: 400px;
+  width: 1600px;
+  height: 800px;
   margin: 0;
   display: inline-block;
   background-size: cover;
+  background-color: white;
 }
 
 .modalClose{
@@ -350,8 +365,33 @@ font-family: Marker;
   border-radius: 10px;
   color: antiquewhite;
 }
+
+.modalOpenComp {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 0px;
+  z-index: 1000;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modalOverlayComp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 999;
+}
  
 }
+
+
 
 /* modale coordonées*/
 .ReactModalPortal{
@@ -361,17 +401,27 @@ font-family: Marker;
 }
 
 
-.ReactModal__Content {
+.modalOpen {
 
-  animation: fadeIn 1s ease-in-out;
-  animation-duration: 3s;
+  animation: fadeIn 3s ease-in-out, zoom 0.6s ease-in-out 1s;
+  animation-duration: 1s;
   border-bottom: solid 1px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   font-size: 25px;
   font-family: cursive;
+  transform: scale(1);
+  transition: transform 0.6s ease-in-out;
 
 }
+
+
+.modalOpen:hover {
+  
+  transform: scale(1.1); 
+  transition: transform 0.6s ease-in-out; 
+}
+
 
 
   
@@ -420,6 +470,12 @@ font-family: Marker;
   cursor: pointer;
 }
 
+.logogit {
+  width: 20px;
+  margin-right: 8px;
+}
+
+
 
 /*Responsive */
 
@@ -454,6 +510,7 @@ font-family: Marker;
       flex-direction: column;
       align-items: center;
       width: 100%;
+      margin-left: 44px;
   }
 }
 @media (max-width: 500px) {
@@ -556,4 +613,12 @@ font-family: Marker;
     margin-left: 94%;
     margin-bottom: 13px;
   }
+}
+
+@media (max-width: 768px) {
+  .logogit {
+    width: 10px;
+  margin-right: 3px;
+  }
+
 }

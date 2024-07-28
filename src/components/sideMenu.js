@@ -6,8 +6,9 @@ import Competences from '../pages/Competences';
 import Modal from 'react-modal';
 
 const SideMenu = () => {
-    const [coordonneesModalIsOpen, setCoordonneesModalIsOpen] = useState(false);
+    const [coordonneesModalIsOpen, setCoordonneesModalIsOpen] = useState(true);
     const [competencesModalIsOpen, setCompetencesModalIsOpen] = useState(false);
+    const [mesCompetencesModalIsOpen, setMesCompetencesModalIsOpen] = useState(false);
     const [sidePanelIsOpen, setSidePanelIsOpen] = useState(false);
 
 
@@ -22,6 +23,7 @@ const SideMenu = () => {
 
     const openCompetencesModal = () => {
         setCompetencesModalIsOpen(true);
+        
     };
 
     const closeCompetencesModal = () => {
@@ -43,23 +45,26 @@ const SideMenu = () => {
                     <li><Link to='/admin/user/presentation' onClick={openSidePanel}>Présentation</Link></li>
                     <li>
                         <a className='link' href='https://github.com/jujuli1/projetcv' target='_blank' rel='noopener noreferrer'>
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" className='logogit' alt="GitHub"  />
                         Github
                         </a>
                     </li>
                     <li><Link to='/admin/user/add' onClick={openCompetencesModal}>Compétences</Link></li>
-                    <li><Link onClick={openCoordonneesModal} className='modalButton'>Mes Coordonnées</Link></li>
+                    
                 </div>
             </ul>
+
+            
 
             {/*modale coordonées */}
             <Modal
                 isOpen={coordonneesModalIsOpen}
-                onRequestClose={closeCoordonneesModal}
+                
                 ariaHideApp={false}
                 className={'modalOpen'}
                 overlayClassName="modalOverlay"
             >
-                <button onClick={closeCoordonneesModal} className='modalClose'>✖</button>
+                
                 <Coordonnees />
             </Modal>
 
@@ -69,10 +74,10 @@ const SideMenu = () => {
                 isOpen={competencesModalIsOpen}
                 onRequestClose={closeCompetencesModal}
                 ariaHideApp={false}
-                className={'modalOpen'}
-                overlayClassName="modalOverlay"
+                className={'modalOpenComp'}
+                overlayClassName="modalOverlayComp"
             >
-                <button onClick={closeCompetencesModal} className='modalClose'>✖</button>
+                
                 <Competences />
             </Modal>
 

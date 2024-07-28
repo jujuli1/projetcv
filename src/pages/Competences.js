@@ -17,7 +17,7 @@ const Competences = () => {
         'https://venpep.com/themes/images/technology/img23.png',
         'https://thesafety.us/images/articles/javascript-logo.png',
         'https://www.foodpal-app.com/uploads/images/food/31769/espresso-6053151e35820-400.webp',
-        'https://www.i-pulse.nl/Content/images/logos/html5css3.png',
+        
         
 
         
@@ -26,15 +26,15 @@ const Competences = () => {
     useEffect(() => {
         if (containerRef.current) {
             // largeur carousel
-            containerRef.current.style.width = `${800 * images.length}px`;
+            containerRef.current.style.width = `${1600 * images.length}px`;
 
             // Ajout photo
             images.forEach((url, index) => {
                 const div = document.createElement('div');
                 div.className = 'photo';
                 div.style.backgroundImage = `url('${url}')`;
-                div.style.width = '800px'; 
-                div.style.height = '400px'; 
+                div.style.width = '1600px'; 
+                div.style.height = '800px'; 
                 div.style.backgroundSize = 'cover'; 
                 div.style.backgroundPosition = 'center'; 
                 containerRef.current.appendChild(div);
@@ -55,7 +55,7 @@ const Competences = () => {
 
     useEffect(() => {
         if (containerRef.current) {
-            containerRef.current.style.transform = `translateX(${-position * 800}px)`;
+            containerRef.current.style.transform = `translateX(${-position * 1600}px)`;
             containerRef.current.style.transition = "all 0.5s ease";
         }
     }, [position]);
@@ -89,8 +89,8 @@ const Competences = () => {
                     <div id='container' ref={containerRef}>
 
                     </div>
-                    <FaArrowLeft className='bouton' id='g' onClick={handleLeftClick} />
-                    <FaArrowRight className='bouton' id='d' onClick={handleRightClick} />
+                    <FaArrowLeft className='bouton' id='g' onClick={handleRightClick} />
+                    <FaArrowRight className='bouton' id='d' onClick={handleLeftClick} />
                 </div>
 
                 {/** zoom image responsive */}
