@@ -52,7 +52,7 @@ body::before {
   transition: transform 1s ease;
   transform: translateX(-100%);
   z-index: 1000;
-  background-color: white;
+  background-color: #FFFBFB;
   border-right-style: groove;
 }
 
