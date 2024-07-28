@@ -33,8 +33,8 @@ const Competences = () => {
                 const div = document.createElement('div');
                 div.className = 'photo';
                 div.style.backgroundImage = `url('${url}')`;
-                div.style.width = '1600px'; 
-                div.style.height = '800px'; 
+                div.style.width = '800px'; 
+                div.style.height = '400px'; 
                 div.style.backgroundSize = 'cover'; 
                 div.style.backgroundPosition = 'center'; 
                 containerRef.current.appendChild(div);
@@ -53,9 +53,11 @@ const Competences = () => {
         setPosition((prev) => Math.min(prev + 1, images.length - 1));
     };
 
+
+
     useEffect(() => {
         if (containerRef.current) {
-            containerRef.current.style.transform = `translateX(${-position * 1600}px)`;
+            containerRef.current.style.transform = `translateX(${-position * 800}px)`; //translate image suivante
             containerRef.current.style.transition = "all 0.5s ease";
         }
     }, [position]);
