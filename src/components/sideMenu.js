@@ -42,13 +42,22 @@ const SideMenu = () => {
         <div className='sidemenu'>
             <ul>
                 <div className='Link'>
-                    <li><Link to='/admin/user/presentation' onClick={openSidePanel}  className='presentation'>Présentation</Link></li>
-                    <li>
-                        <a className='link' href='https://github.com/jujuli1/projetcv' target='_blank' rel='noopener noreferrer'>
+
+                <li><Link to='/admin/user/presentation' onClick={openSidePanel}  className='presentation'>Présentation</Link></li>
+
+
+                    <div className='pageJob'>
+                        <a className='link' href='https://www.linkedin.com/in/julien-lefevre-6bab8255/' target='_blank' rel='noopener noreferrer'>
+                        <img src='https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png' alt='LinkedIn' className='logolinkedin' />
+                        Linkedin</a>
+                    <a className='link' href='https://github.com/jujuli1/projetcv' target='_blank' rel='noopener noreferrer'>
                         <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" className='logogit' alt="GitHub"  />
                         Github
                         </a>
-                    </li>
+                    
+                    </div>
+                   
+                
                     <li><Link to='/admin/user/add' onClick={openCompetencesModal}>Compétences</Link></li>
                     
                 </div>
