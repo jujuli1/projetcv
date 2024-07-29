@@ -140,6 +140,15 @@ body::before {
   }
 }
 
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 
 
 .fade-in-qui {
@@ -167,14 +176,7 @@ body::before {
   
 }
 
-@media (max-width: 768px) {
-.fade-in-qui {
-  animation: fadeIn 1s ease-in-out;
-  animation-duration: 3s;
-  font-size: 27px;
-}
 
-}
 
 
 /* page presentation*/
@@ -182,7 +184,11 @@ body::before {
 .presentation{
   
   text-decoration: none;
-  
+  animation: blink 1s ease-in-out 3;
+  animation-duration: 1s;
+  border-radius: 20px;
+  transform: scale(1);
+  transition: transform 0.6s ease-in-out;
   
 }
 
@@ -197,7 +203,7 @@ font-family: Marker;
 }
 
 .qui-container{
-  height: 50px;
+  height: 0px;
 }
 
 .qui-container p {
@@ -212,7 +218,7 @@ font-family: Marker;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -45px;
+  
   margin-left: -14%;
   margin-bottom: 90px;
 }
@@ -246,7 +252,7 @@ font-family: Marker;
 .signature {
   padding-left: 60%;
   height: 131px;
-  width: 39%;
+  width: 30%;
   margin-top: -122px;
 }
 
@@ -396,12 +402,14 @@ font-family: Marker;
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 999;
 }
- 
-}
 
 .modalComp{
   position: absolute;
 }
+ 
+}
+
+
 
 
 /* modale coordonées*/
@@ -414,7 +422,7 @@ font-family: Marker;
 
 .modalOpen {
 
-  animation: fadeIn 3s ease-in-out, zoom 0.6s ease-in-out 1s;
+  animation: fadeIn 3s ease-in-out;
   animation-duration: 1s;
   border-bottom: solid 1px;
   border-bottom-left-radius: 10px;
@@ -498,6 +506,14 @@ font-family: Marker;
 
 
 /*Responsive */
+
+@media (max-width: 768px) {
+  .fade-in-qui {
+    
+    font-size: 27px;
+  }
+  
+  }
 
 @media (max-width: 768px) {
 
@@ -620,6 +636,7 @@ font-family: Marker;
   font-weight: bold;
   width: 89%;
   margin-left: 15px;
+  font-size: 15px;
   }
 
 }
@@ -628,7 +645,7 @@ font-family: Marker;
 @media (max-width: 768px) {
   .imgResponsive {
     display: flex;
-    width: 5%;
+    width: 3%;
     height: auto;
     margin-left: 94%;
     margin-bottom: 13px;
@@ -642,3 +659,62 @@ font-family: Marker;
   }
 
 }
+
+@media (max-width: 768px) {
+  .signature {
+    padding-left: 68%;
+    height: 110px;
+    width: 22%;
+    margin-top: -105px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .sidePanelClose {
+    position: sticky;
+  top: 4px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 92%;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .modalOpen {
+    animation: fadeIn 3s ease-in-out;
+      animation-duration: 3s;
+    animation-duration: 1s;
+    border-bottom: solid 1px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: solid 1px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 25px;
+    font-family: cursive;
+    transform: scale(1);
+    transition: transform 0.6s ease-in-out;
+    margin-top: 80px;
+    margin-right: 0px;
+    box-shadow: 0 4px 5px 5px rgba(0, 0, 0, 0.2);
+    border: none;
+    outline: none;
+   
+  }
+
+}
+
+
